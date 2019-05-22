@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<AnchorPane id="AnchorPane" fx:id="ListReponseInterface" prefHeight="700.0" prefWidth="1172.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="Sujetresoluimg" fitHeight="38.0" fitWidth="1069.0" layoutX="90.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-radius: 20;">
+         <image>
+            <Image url="@../../../../../ICON/sujet_resolut.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="LabelSujetFermer" layoutX="92.0" layoutY="37.0" text="SUJET FERMÉ !" textFill="#f26355">
+         <font>
+            <Font name="Lao UI" size="20.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="SujetList" layoutX="91.0" layoutY="62.0" prefHeight="200.0" prefWidth="1069.0" />
+      <JFXListView fx:id="ReponseList" layoutX="164.0" layoutY="267.0" prefHeight="200.0" prefWidth="996.0" />
+      <JFXButton fx:id="Ajouterbtn" layoutX="91.0" layoutY="497.0" onAction="#AjouterReponse" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #66bb6a;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Annulerbtn" layoutX="91.0" layoutY="533.0" onAction="#AnnulerAction" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #e0e0e0;" text="Annuler" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Modifierbtn" layoutX="91.0" layoutY="497.0" onAction="#ModifierReponse" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #66bb6a;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="ErrorMessage" layoutX="164.0" layoutY="469.0" text="Réponse ne doit pas etre vide !!" textFill="#ef5350">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <HTMLEditor fx:id="HtmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="164.0" layoutY="489.0" prefHeight="120.0" prefWidth="996.0" />
+   </children>
+</AnchorPane>

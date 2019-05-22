@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="root" accessibleText="aaa" onDragDetected="#inv" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.behindthemachines.grandvert.Evenement.AffevController">
+     <children>
+      <TableView fx:id="table" layoutX="34.0" layoutY="45.0" prefHeight="165.0" prefWidth="438.0">
+        <columns>
+          <TableColumn fx:id="titre" prefWidth="160.0" text="Titre" />
+            <TableColumn fx:id="dated" prefWidth="95.0" text="Date début" />
+            <TableColumn fx:id="datef" prefWidth="83.0" text="Date fin" />
+          <TableColumn fx:id="ville" prefWidth="100.0" text="Ville" />
+        </columns>
+      </TableView>
+      <Button fx:id="inv" layoutX="500.0" layoutY="350.0" mnemonicParsing="false" onAction="#inv" prefHeight="25.0" prefWidth="53.0" text="Inviter" />
+      <Button fx:id="np" layoutX="188.0" layoutY="350.0" mnemonicParsing="false" onAction="#np" prefHeight="25.0" prefWidth="119.0" text="Je ne participe pas" />
+      <Button fx:id="p" layoutX="42.0" layoutY="350.0" mnemonicParsing="false" onAction="#p" prefHeight="25.0" prefWidth="119.0" text="Je Participe" />
+      <Label fx:id="prix1" layoutX="33.0" layoutY="226.0" prefHeight="17.0" prefWidth="78.0" text="Organisation :" />
+      <Label fx:id="prix11" layoutX="33.0" layoutY="265.0" prefHeight="17.0" prefWidth="78.0" text="Description :" />
+      <TextField fx:id="tel" layoutX="334.0" layoutY="350.0" promptText="Téléphone" />
+      <Label fx:id="org" layoutX="131.0" layoutY="226.0" prefHeight="17.0" prefWidth="156.0" />
+      <Label fx:id="des" layoutX="111.0" layoutY="265.0" prefHeight="68.0" prefWidth="202.0" />
+      <ImageView fx:id="photo" fitHeight="118.0" fitWidth="167.0" layoutX="380.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

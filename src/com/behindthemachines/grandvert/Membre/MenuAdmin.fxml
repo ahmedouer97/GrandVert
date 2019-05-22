@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="275.0" styleClass="daquaB" stylesheets="@../../../../Style/Styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.behindthemachines.grandvert.Membre.MenuAdminController">
+
+   <children>
+      <Label layoutX="98.0" layoutY="14.0" styleClass="app-label" text="GrandVert" />
+      <VBox layoutY="254.0" prefHeight="321.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="254.0">
+         <children>
+            <Button fx:id="dash" mnemonicParsing="false" onAction="#goDashboard" prefHeight="42.0" prefWidth="308.0" text="Dashboard" />
+            <Button mnemonicParsing="false" onAction="#goConsulterUser" prefHeight="46.0" prefWidth="281.0" text="Membres" />
+            <Button mnemonicParsing="false" onAction="#goForum" prefHeight="42.0" prefWidth="275.0" text="Forum" />
+            <MenuButton fx:id="plantebtn" mnemonicParsing="false" prefHeight="46.0" prefWidth="293.0" text="Plantes">
+              <items>
+                <MenuItem fx:id="addItem" mnemonicParsing="false" onAction="#goAjouterPlante" text="Ajouter" />
+                <MenuItem fx:id="planteItem" mnemonicParsing="false" onAction="#goConsulterPlante" text="Plantes" />
+                  <MenuItem fx:id="propItem" mnemonicParsing="false" onAction="#goConsulterProp" text="Proposition" />
+                  <MenuItem fx:id="archiveItem" mnemonicParsing="false" onAction="#goArchive" text="Archive" />
+              </items>
+            </MenuButton>
+            <Button fx:id="ev" mnemonicParsing="false" onAction="#goev" prefHeight="42.0" prefWidth="275.0" text="Evénement" />
+            <Button fx:id="achat" mnemonicParsing="false" onAction="#goAchat" prefHeight="42.0" prefWidth="308.0" text="Achat" />
+            <MenuButton fx:id="preservationbtn" mnemonicParsing="false" prefHeight="46.0" prefWidth="293.0" text="Preservation">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goReserv" text="Gestion Réservation" />
+                  <MenuItem mnemonicParsing="false" onAction="#goEspace" text="Gestion Espace" />
+                  <MenuItem mnemonicParsing="false" onAction="#goHistor" text="Réservations Expirés" />
+               </items>
+            </MenuButton>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutY="70.0" prefHeight="182.0" prefWidth="280.0">
+         <children>
+            <ImageView fx:id="userImage" fitHeight="74.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/admin-image.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="usernameLabel" styleClass="username-label" text="Hello Admin" />
+            <HBox alignment="CENTER" prefHeight="87.0" prefWidth="280.0">
+               <children>
+                  <JFXButton fx:id="profileBtn" onAction="#goProfile" text="Mon Profile">
+                     <styleClass>
+                        <String fx:value="profile-btn" />
+                        <String fx:value="greyB" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></JFXButton>
+                  <JFXButton fx:id="logoutBtn" onAction="#disconnect" text="Déconnexion">
+                     <styleClass>
+                        <String fx:value="profile-btn" />
+                        <String fx:value="greyB" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fx:id="trianglenotification" fitHeight="20.0" fitWidth="20.0" layoutX="236.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Icon/Triangle.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="203.0" layoutY="40.0" onMouseClicked="#ShowNotification" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Icon/notification.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#f44336" layoutX="226.0" layoutY="42.0" radius="10.0" stroke="#f44336" strokeType="INSIDE" />
+      <Label fx:id="nbNotification" layoutX="223.0" layoutY="34.0" text="0" textFill="WHITE" />
+      <Pane fx:id="PaneListNotification" layoutX="246.0" layoutY="27.0" prefHeight="284.0" prefWidth="437.0" style="-fx-background-color: white;">
+         <children>
+            <JFXListView fx:id="ListNotification" layoutX="7.0" layoutY="9.0" prefHeight="270.0" prefWidth="423.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="root" accessibleText="aaa" onDragDetected="#det" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.behindthemachines.grandvert.Plante.ConsulterController">
+    <children>
+      <TableView fx:id="table" layoutX="300.0" layoutY="78.0" prefHeight="200.0" prefWidth="225.0">
+        <columns>
+          <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
+          <TableColumn fx:id="prix" prefWidth="75.0" text="prix" />
+            <TableColumn fx:id="stock" prefWidth="75.0" text="stock" />
+        </columns>
+      </TableView>
+      <Label layoutX="71.0" layoutY="61.0" text="La plante que vous aver choisie" />
+      <Label layoutX="307.0" layoutY="21.0" text="recherche" />
+      <JFXTextField fx:id="nomp" editable="false" layoutX="78.0" layoutY="93.0" />
+      <JFXButton fx:id="det" buttonType="RAISED" disable="true" layoutX="80.0" layoutY="137.0" onAction="#det" prefHeight="54.0" prefWidth="149.0" text="Voir plus" />
+      <JFXButton fx:id="mod" buttonType="RAISED" disable="true" layoutX="80.0" layoutY="200.0" onAction="#modifier" prefHeight="54.0" prefWidth="149.0" text="Modifier" />
+      <JFXButton fx:id="delete" buttonType="RAISED" disable="true" layoutX="80.0" layoutY="278.0" onAction="#delete" prefHeight="54.0" prefWidth="149.0" text="Supprimer" />
+      <JFXTextField fx:id="rech" layoutX="345.0" layoutY="38.0" />
+   </children>
+</AnchorPane>

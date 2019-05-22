@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.behindthemachines.grandvert.Membre.LandingController">
+   <children>
+      <Label layoutX="331.0" layoutY="192.0" text="GrandVert" textAlignment="CENTER" textFill="#1eb200">
+         <font>
+            <Font size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="276.0" layoutY="239.0" text="Welcome" />
+   </children>
+</AnchorPane>

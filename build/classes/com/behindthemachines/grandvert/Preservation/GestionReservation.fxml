@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="comboEspace" maxWidth="1000.0" prefHeight="536.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.behindthemachines.grandvert.Preservation.GestionReservationController">
+   <children>
+      <Label layoutX="21.0" layoutY="99.0" text="Date Debut : ">
+         <font>
+            <Font name="Arial Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="152.0" text="Date Fin : ">
+         <font>
+            <Font name="Arial Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="208.0" text="NbPlaces : ">
+         <font>
+            <Font name="Arial Italic" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateDebutPicker" layoutX="161.0" layoutY="94.0" prefHeight="31.0" prefWidth="174.0" promptText="Entrer Date Debut" />
+      <DatePicker fx:id="dateFinPicker" layoutX="161.0" layoutY="148.0" prefHeight="31.0" prefWidth="174.0" promptText="Entrer Date Fin" />
+      <TextField fx:id="nbPlacesFiled" layoutX="161.0" layoutY="204.0" prefHeight="31.0" prefWidth="174.0" promptText="Entrer NbPlaces" />
+      <Button fx:id="Annuler" layoutX="72.0" layoutY="388.0" mnemonicParsing="false" onAction="#onAnullerRes" prefHeight="44.0" prefWidth="258.0" text="Annuler La Réservation">
+         <font>
+            <Font name="Arial Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="reserver" layoutX="72.0" layoutY="324.0" mnemonicParsing="false" onAction="#onReserver" prefHeight="44.0" prefWidth="258.0" text="Réserver">
+         <font>
+            <Font name="Arial Italic" size="20.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableReservation" layoutX="394.0" layoutY="121.0" prefHeight="380.0" prefWidth="586.0">
+        <columns>
+          <TableColumn fx:id="dateDebut" prefWidth="162.0" text="Date Debut" />
+          <TableColumn fx:id="dateFin" prefWidth="150.0" text="Date Fin" />
+            <TableColumn fx:id="nbPlaces" prefWidth="108.0" text="NbPlaces" />
+            <TableColumn fx:id="espaceDePreservation" prefWidth="165.0" text="Espace De Préservation" />
+        </columns>
+      </TableView>
+      <Button fx:id="modifier" layoutX="72.0" layoutY="450.0" mnemonicParsing="false" onAction="#onClickModfier" prefHeight="44.0" prefWidth="258.0" text="Modifier La Réservation">
+         <font>
+            <Font name="Arial Italic" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchBox" layoutX="576.0" layoutY="79.0" onKeyTyped="#searchRecord" prefHeight="31.0" prefWidth="258.0" promptText="Search Here !">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="combobox" layoutX="161.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" promptText="Selectionner L'espace" />
+      <Label layoutX="10.0" layoutY="266.0" text="Nom Espace : ">
+         <font>
+            <Font name="Arial Italic" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="335.0" layoutY="14.0" promptText="Gérer Vos Réservations !" unFocusColor="BLACK">
+         <font>
+            <Font name="Arial Bold Italic" size="25.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

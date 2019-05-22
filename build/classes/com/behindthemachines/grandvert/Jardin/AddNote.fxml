@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextArea fx:id="noteText" layoutX="14.0" layoutY="74.0" prefHeight="362.0" prefWidth="300.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0" />
+      <Label layoutX="87.0" layoutY="14.0" text="Ajouter une note" />
+      <HBox layoutY="465.0" prefHeight="59.0" prefWidth="300.0">
+         <children>
+            <JFXButton onAction="#addNote" prefHeight="63.0" prefWidth="156.0" text="Ajouter" />
+            <JFXButton onAction="#closeWindow" prefHeight="63.0" prefWidth="156.0" text="Annuler" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
