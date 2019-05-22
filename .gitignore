@@ -2,6 +2,11 @@
 nbactions.xml
 nb-configuration.xml
 
+/nbproject/private/
+/build/
+/data/
+/dist/
+
 ### Java template
 *.class
 
