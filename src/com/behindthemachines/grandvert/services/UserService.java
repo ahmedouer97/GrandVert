@@ -47,7 +47,7 @@ public class UserService implements IService<User> {
     public int addUser(User t) {
         String res="";
         HttpClient httpClient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://localhost/GrandVert-Web/web/app_dev.php/api/registerApi");
+        HttpPost httpPost = new HttpPost("http://localhost/GrandVert/web/app_dev.php/api/registerApi");
         
         ArrayList<NameValuePair> params = new ArrayList<NameValuePair>(4);
         params.add(new BasicNameValuePair("username", t.getUsername()));
@@ -158,7 +158,7 @@ public class UserService implements IService<User> {
     public User checkLogin(String username, String password){
         String res="";
         HttpClient httpClient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://localhost/GrandVert-Web/web/app_dev.php/api/checkpassword");
+        HttpPost httpPost = new HttpPost("http://localhost/GrandVert/web/app_dev.php/api/checkpassword");
         
         ArrayList<NameValuePair> params = new ArrayList<NameValuePair>(2);
         params.add(new BasicNameValuePair("username", username));

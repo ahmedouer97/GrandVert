@@ -108,7 +108,7 @@ public class ListUsersController implements Initializable {
                 setText(null);
                 setGraphic(null);
             } else {
-                Image img = new Image(getClass().getResourceAsStream("/ICON/edit.png"));
+                Image img = new Image(getClass().getResourceAsStream("/Icon/edit.png"));
                 
                 ImageView iv = new ImageView();
                 iv.setImage(img);
@@ -145,7 +145,7 @@ public class ListUsersController implements Initializable {
                 setText(null);
                 setGraphic(null);
             } else {
-                Image img = new Image(getClass().getResourceAsStream("/ICON/delete.png"));
+                Image img = new Image(getClass().getResourceAsStream("/Icon/delete.png"));
                 
                 ImageView iv = new ImageView();
                 iv.setImage(img);
@@ -194,7 +194,7 @@ public class ListUsersController implements Initializable {
                 setText(null);
                 setGraphic(null);
             } else {
-                Image img = new Image(getClass().getResourceAsStream("/ICON/Security.png"));
+                Image img = new Image(getClass().getResourceAsStream("/Icon/Security.png"));
                 
                 ImageView iv = new ImageView();
                 iv.setImage(img);

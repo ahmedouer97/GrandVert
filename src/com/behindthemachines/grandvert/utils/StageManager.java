@@ -60,8 +60,10 @@ public class StageManager {
     }
     
     public void Load(String s){
+
         try {
-            URL content = getClass().getResource("/com/behindthemachines/grandvert/"+s+".fxml");
+           
+             URL content = getClass().getResource("/com/behindthemachines/grandvert/"+s+".fxml");
             AnchorPane middle = FXMLLoader.load(content);
             
             root.setCenter(middle);

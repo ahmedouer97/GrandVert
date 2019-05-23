@@ -14,7 +14,7 @@ public class WorkshopConnexion {
 
     private String Url="jdbc:mysql://localhost:3306/garden";
     private String Login="root";
-    private String Password="root";
+    private String Password="";
     
     private Connection cnx; 
     private static WorkshopConnexion Instance;
